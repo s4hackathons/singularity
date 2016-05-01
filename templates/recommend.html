@@ -1,0 +1,16 @@
+<table>
+	<thead>
+    		<th>Item</th>
+    		<th>Qty</th>
+  	</thead>
+	<br>
+	<form method="POST" action="/confirm">
+		{% for item, qty in recommend_list.iteritems() %}
+    			<tr>
+      				<td><input type="text" name="item" value={{ item }} readonly></td>
+      				<td><input type="text" name="qty" value={{ qty }}></td>
+    			</tr>
+		{% endfor %}
+		<td><input type="submit" value="Order"></td>
+	</form>
+</table> 
